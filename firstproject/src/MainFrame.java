@@ -71,8 +71,10 @@ public class MainFrame extends JFrame {
         panelComentarios.add(new JLabel("Comentários:"), BorderLayout.NORTH);
         
         areaComentarios = new JTextArea(3, 30);
-        areaComentarios.setText("");
         areaComentarios.setLineWrap(true);
+        JScrollPane scrollPane = new JScrollPane(areaComentarios);
+        panelComentarios.add(scrollPane, BorderLayout.CENTER);
+        panelPrincipal.add(panelComentarios);
 
         JPanel panelBotoes = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
         
